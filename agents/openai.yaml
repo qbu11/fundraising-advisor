@@ -1,0 +1,4 @@
+interface:
+  display_name: "融资顾问与投资人推荐"
+  short_description: "基于投资人数据库提供融资策略、投资人人选和个性化沟通建议"
+  default_prompt: "Use $fundraising-advisor to assess my startup fundraising plan and recommend suitable investors with outreach and meeting strategies."

@@ -1,0 +1,23 @@
+# Credentials — never commit real values
+.env
+**/.env
+.env.*
+!.env.example
+
+# Project input files may contain confidential founder data
+my-project.json
+project.json
+!references/example-project.json
+
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local editor and OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

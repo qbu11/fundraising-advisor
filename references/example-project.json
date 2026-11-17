@@ -1,0 +1,28 @@
+{
+  "project": {
+    "name": "示例工业智能项目",
+    "summary": "为制造企业提供基于人工智能的设备故障预测与维护决策软件",
+    "product": "连接设备数据并生成故障预警、维护计划和备件建议的企业软件",
+    "sectors": ["AI", "企业软件"],
+    "stage": "天使轮",
+    "round": "天使轮",
+    "amount": {
+      "min_wan_cny": 1000,
+      "max_wan_cny": 2000,
+      "currency": "人民币"
+    },
+    "traction": "已完成产品试点，具体付费、留存和节省成本数据待补充",
+    "business_model": "按工厂或设备数量收取年度订阅费",
+    "team_highlights": ["核心团队具有工业软件和机器学习经验"],
+    "location": "北京",
+    "use_of_funds": ["产品工程化", "标杆客户交付", "销售团队建设"],
+    "fundraising_goal": "用18个月验证可重复交付和付费续约"
+  },
+  "preferences": {
+    "person_expertise": ["AI", "人工智能", "企业软件"],
+    "exclude_funds": [],
+    "compliance": ["trusted"]
+  },
+  "top_k": 10,
+  "language": "zh-CN"
+}
