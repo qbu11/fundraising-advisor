@@ -171,6 +171,20 @@ git clone https://github.com/qbu11/fundraising-advisor.git .agents/skills/fundra
 
 安装后直接描述项目即可，例如"我做工业 AI 质检，天使轮融资 1000–2000 万，帮我找匹配的投资人"。Agent 会按 `SKILL.md` 生成项目 JSON、调用脚本、读取结果并按固定格式输出建议。
 
+## 服务器部署与 cron 定时任务
+
+**两种运行模式，requirements 不同：**
+
+| 模式 | 需要 Claude Code | 需要 LLM API Key | 产出 |
+|---|---|---|---|
+| CLI 定时筛选 | **不需要** | 不需要 | 推荐 JSON |
+| Agent 完整顾问报告 | **需要** | 需要 | 7 段融资顾问报告 |
+
+- 只用 CLI 定时拉候选人：服务器装 Python 3.10+ 和投资人 API 凭证即可，不需要任何 agent 运行时。
+- 需要 `SKILL.md` 定义的完整顾问报告：必须在服务器上安装 Claude Code CLI 并配置 API key。
+
+完整部署步骤（env 文件、cron/systemd 示例、Claude Code 安装、skill 软链、权限、故障排查）见 [docs/deployment.md](docs/deployment.md)。
+
 ## 测试
 
 ```bash
@@ -213,6 +227,7 @@ references/
   api-contract.md                 API 契约与客户端保护措施
 fixtures/synthetic-replay.json    合成回放数据（演示与测试）
 docs/api-reference.md             投资人 API 接口文档
+docs/deployment.md                服务器部署与 cron 定时任务
 tests/test_cli_e2e.py             端到端 CLI 测试
 ```
 
