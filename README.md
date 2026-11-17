@@ -183,6 +183,14 @@ python -m unittest discover -s tests -v
 
 CI 在 Python 3.10 和 3.12 上跑上述两组测试（`.github/workflows/test.yml`）。全部测试不联网、不需要凭证。
 
+配置好凭证后，再加一组真实数据冒烟测试，逐条断言筛选约束（服务器端合规/金额过滤、core 层规则、risk 排除、每机构人数上限、排序稳定性）：
+
+```bash
+python -m unittest tests.test_live_smoke -v
+```
+
+没有凭证时这组测试自动跳过。
+
 ## 安全与合规边界
 
 - 凭证只存在于环境变量或 gitignored 的 `.env`；仓库里只有 `.env.example` 模板。
